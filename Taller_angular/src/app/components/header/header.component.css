@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #000000;
+  padding: 1rem 2rem;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ff0000b9;
+}
+.btn-outline-primary {
+  margin-right: 1rem;
+}
+
+.nav-link{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffff;
+}
+
+.button{
+  font-weight: bold;
+  /* font-size: large; */
+}
