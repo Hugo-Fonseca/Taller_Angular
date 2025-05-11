@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,HeaderComponent,FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [ProductListComponent, HeaderComponent, FooterComponent, RouterOutlet],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'Taller_angular';
-}
+export class AppComponent {}
