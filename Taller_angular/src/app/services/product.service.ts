@@ -16,24 +16,24 @@ export class ProductService {
   private products = new BehaviorSubject<Product[]>([
     {
       id: 1,
-      name: 'Super Mario',
-      price: 1000,
-      category: 'Games',
-      imageUrl: 'assets/laptop.jpg'
+      name: 'Matrix',
+      price: 12000,
+      category: 'Movies',
+      imageUrl: 'assets/matrix.jpg'
     },
     {
       id: 2,
-      name: 'Smartphone',
-      price: 700,
-      category: 'Electronics',
-      imageUrl: 'assets/smartphone.jpg'
+      name: 'Doctor House',
+      price: 5000,
+      category: 'Series',
+      imageUrl: 'assets/doctor-house.jpg'
     },
     {
       id: 3,
-      name: 'Headphones',
-      price: 150,
-      category: 'Accessories',
-      imageUrl: 'assets/headphones.jpg'
+      name: 'Los Simpsons (Temporada 1 - 15)',
+      price: 30000,
+      category: 'Cartoons',
+      imageUrl: 'assets/los-simpsons.jpg'
     }
   ]);
 

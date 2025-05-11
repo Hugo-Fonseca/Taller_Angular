@@ -1,4 +1,8 @@
 body{
-    background-color: #0a0a0a;
+  background-image: url('/img/fondo-negro.jpg'); /*Asset se refiere a los achivos activos en en el sitio web*/
+  background-repeat: no-repeat; /*Evita que la imagen se repita */
+  background-size: cover; /*Ajusta el tamaño de la imagen para cubrir todo el body */
+
+    /* background-color: #0a0a0a; */
     /* background-color: #333; */
 }
