@@ -1,56 +1,51 @@
 <div class="container mt-4">
 
   <input
-    type="text"
-    placeholder="Buscar producto"
-    [(ngModel)]="searchTerm"
-    (input)="searchProducts()"
-    class="form-control mb-4"
+    type="text" placeholder= "Buscar producto" [(ngModel)] = "searchTerm" (input) = "searchProducts()" class="form-control mb-4"
   />
 
   <h2 class="text-light">Destacados</h2>
   <div class="row">
-    <div
-      *ngFor="let product of (filteredProducts.length > 0 ? filteredProducts : products)"
-      class="col-md-4 mb-3"
-    >
-      <div class="card h-100">
-        <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}" />
+    <div *ngFor="let productDestacados of (filteredProductsDestacados.length > 0 ? filteredProductsDestacados : productsDestacados)" class="col-md-4 mb-3">
+      
+      <div class="card h-60 small-card">
+        <img [src]="productDestacados.imageUrl" class="card-img-top" alt="{{ productDestacados.name }}" />
         <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.price | currency }}</p>
-          <button class="btn btn-primary" (click)="addToCart(product)">Alquilar</button>
+          <h5 class="card-title">{{ productDestacados.name }}</h5>
+          <p class="card-text">${{ productDestacados.price }}</p>
+          <button class="btn btn-primary" (click)="addToCart(productDestacados)">Alquilar</button>
         </div>
       </div>
     </div>
 
     <h2 class="text-light">Series</h2>
+|<div class="row">
+  <div *ngFor="let productSeries of (filteredProductsSeries.length > 0 ? filteredProductsSeries : productsSeries)" class="col-md-4 mb-3">
+    <div class="card h-60 small-card">
+      <img [src]="productSeries.imageUrl" class="card-img-top" alt="{{ productSeries.name }}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ productSeries.name }}</h5>
+        <p class="card-text">${{ productSeries.price }}</p>
+        <button class="btn btn-primary" (click)="addToCart(productSeries)">Alquilar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <h2 class="text-light">Anime</h2>
   <div class="row">
-    <div *ngFor="let product of (filteredProducts.length > 0 ? filteredProducts : products)" class="col-md-4 mb-3">
-      <div class="card h-100">
-        <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}" />
+    <div *ngFor="let productAnimes of (filteredProductsAnimes.length > 0 ? filteredProductsAnimes : productsAnimes)" class="col-md-4 mb-3">
+      <div class="card h-60 small-card">
+        <img [src]="productAnimes.imageUrl" class="card-img-top " alt="{{ productAnimes.name }}" />
         <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.price | currency }}</p>
-          <button class="btn btn-primary" (click)="addToCart(product)">Alquilar</button>
+          <h5 class="card-title">{{ productAnimes.name }}</h5>
+          <p class="card-text">${{ productAnimes.price  }}</p>
+          <button class="btn btn-primary" (click)="addToCart(productAnimes)">Alquilar</button>
         </div>
       </div>
     </div>
 
-    <h2 class="text-light">Peliculas animadas</h2>
-  <div class="row">
-    <div *ngFor="let product of (filteredProducts.length > 0 ? filteredProducts : products)" class="col-md-4 mb-3">
-      <div class="card h-100">
-        <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}" />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.price | currency }}</p>
-          <button class="btn btn-primary" (click)="addToCart(product)">Alquilar</button>
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="searchTerm && filteredProducts.length === 0" class="col-12 text-center mt-4">
+    <div *ngIf="searchTerm && filteredProductsDestacados.length === 0 && filteredProductsSeries.length === 0 && filteredProductsAnimes.length === 0 " class="col-12 text-center mt-4">
       <p class="text-light">No se encontraron productos.</p>
     </div>
   </div>

@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar">
   <a class="navbar-brand" href="#">TVPlus</a>
+  <!-- Boton de Home -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <!-- Lista de iconos del navbar -->
+
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -28,5 +31,8 @@
       </li>
     </ul>
   </div>
-  <button type="button" class="btn btn-danger btn-lg" routerLink="/login" href="info.html"><strong>Acerca de esta Página</strong></button>
+  <!-- Boton que manda para "Acerca de está página" -->
+
+  <button type="button" class="btn btn-danger btn-lg" [routerLink]="'/informacion'"><strong>Acerca de esta Página</strong>
+</button>
 </nav>

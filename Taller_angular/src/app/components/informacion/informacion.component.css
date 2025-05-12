@@ -1,0 +1,86 @@
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #272626;
+    color: #ffffff;
+}
+
+/* Sección principal */
+#about {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+/* Título */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Parrafo */
+p {
+    font-size: 1rem;
+    color: #ffffff !important;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo para el equipo */
+.team {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Miembros del equipo */
+.team-member {
+    text-align: center;
+    max-width: 300px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+}
