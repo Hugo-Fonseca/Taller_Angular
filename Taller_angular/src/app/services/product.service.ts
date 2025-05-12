@@ -24,7 +24,7 @@ export class ProductServiceDestacados {
     {
       id: 2,
       name: 'Doctor House',
-      price: 5000,
+      price: 15000,
       category: 'Series',
       imageUrl: 'img/doctorHouse.jpg'
     },
